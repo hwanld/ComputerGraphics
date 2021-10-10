@@ -5,12 +5,12 @@
 -Using 2 functions ; void init(), void render(GLFWwindow* window)<br>
 <b>-Ideas : Using circular coordinate system to represent the vector which is on the circle, than draw the triangles with ther vertices</b><br>
 -void init()<br>
-  Load shades by program.loadShaders(".vert,.frag")<br>
-  Make vector container to save the informations of vertice : std::vector<glm::vec3> vert;<br>
-    glm::vec3 is the data type which is in glm library, means 3-dimension vector's each value (x,y,z)<br>
-  Then push_back the informations of vertice : each vertice's index is same to the index of the vector container<br>
-    push_back the origin vector : (0,0,0) <br>
-   push_back the vector which is on the circle : we cannot represent the circle with infinitive vectors; so in this, I represent the circle with the number of triangles and circular coordinate systems.
+  &nbsp; &nbsp; &nbsp; &nbsp;Load shades by program.loadShaders(".vert,.frag")<br>
+  &nbsp; &nbsp; &nbsp; &nbsp;Make vector container to save the informations of vertice : std::vector<glm::vec3> vert;<br>
+    &nbsp; &nbsp; &nbsp; &nbsp;glm::vec3 is the data type which is in glm library, means 3-dimension vector's each value (x,y,z)<br>
+  &nbsp; &nbsp; &nbsp; &nbsp;Then push_back the informations of vertice : each vertice's index is same to the index of the vector container<br>
+    &nbsp; &nbsp; &nbsp; &nbsp;push_back the origin vector : (0,0,0) <br>
+   &nbsp; &nbsp; &nbsp; &nbsp;push_back the vector which is on the circle : we cannot represent the circle with infinitive vectors; so in this, I represent the circle with the number of triangles and circular coordinate systems.
     For declaring the number of triangle with macro; it's easy to control the variable. Each vertice's informations is same as below : <br>
      GLfloat theta = (GLfloat)(2 * PI) / howMuchTriUseForCircle * i;<br>
      x = (GLfloat)RADUIS * std::cos(theta);<br>
