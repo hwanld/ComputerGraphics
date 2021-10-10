@@ -37,10 +37,10 @@
 	  &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;glBindBuffer(GL_ARRAY_BUFFER, vertBuf);<br>
 	  &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;glVertexAttribPointer(0, 3, GL_FLOAT, 0, 0, 0);<br><br>
 <b>-void render</b> (GLFWwindow* window)<br>
-  &nbsp; &nbsp; &nbsp; &nbsp;Easy to render because all the informations of vertices and primitives are in the global variable, and each is binded at init function
+  &nbsp; &nbsp; &nbsp; &nbsp;Easy to render because all the informations of vertices and primitives are in the global variable, and each is binded at init function<br>
   &nbsp; &nbsp; &nbsp; &nbsp;Load program's ID : glUseProgram(program.programID)<br>
-  &nbsp; &nbsp; &nbsp; &nbsp;Bind vertexArray and buffers
-  &nbsp; &nbsp; &nbsp; &nbsp;After Binding, draw elements : glDrawElements(GL_TRIANGLES, 3*howMuchTriUseForCircle, GL_UNSIGNED_INT, 0);
+  &nbsp; &nbsp; &nbsp; &nbsp;Bind vertexArray and buffers<br>
+  &nbsp; &nbsp; &nbsp; &nbsp;After Binding, draw elements : glDrawElements(GL_TRIANGLES, 3*howMuchTriUseForCircle, GL_UNSIGNED_INT, 0);<br>
   
     
   
