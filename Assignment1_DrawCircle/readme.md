@@ -4,7 +4,7 @@
 -Using global variable; Program program, GLuint vertBuf,triBuf,vertArray_can use everywhere like function<br>
 -Using 2 functions ; void init(), void render(GLFWwindow* window)<br>
 <b>-Ideas : Using circular coordinate system to represent the vector which is on the circle, than draw the triangles with ther vertices</b><br>
--void init()<br>
+<b>-void init()</b><br>
   &nbsp; &nbsp; &nbsp; &nbsp;Load shades by program.loadShaders(".vert,.frag")<br>
   &nbsp; &nbsp; &nbsp; &nbsp;Make vector container to save the informations of vertice : std::vector<glm::vec3> vert;<br>
     &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;glm::vec3 is the data type which is in glm library, means 3-dimension vector's each value (x,y,z)<br>
@@ -36,7 +36,7 @@
 	  &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;glEnableVertexAttribArray(0);<br>
 	  &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;glBindBuffer(GL_ARRAY_BUFFER, vertBuf);<br>
 	  &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;glVertexAttribPointer(0, 3, GL_FLOAT, 0, 0, 0);<br><br>
--void render (GLFWwindow* window)<br>
+<b>-void render</b> (GLFWwindow* window)<br>
   &nbsp; &nbsp; &nbsp; &nbsp;Easy to render because all the informations of vertices and primitives are in the global variable, and each is binded at init function
   &nbsp; &nbsp; &nbsp; &nbsp;Load program's ID : glUseProgram(program.programID)<br>
   &nbsp; &nbsp; &nbsp; &nbsp;Bind vertexArray and buffers
