@@ -11,7 +11,7 @@
   &nbsp; &nbsp; &nbsp; &nbsp;Then push_back the informations of vertice : each vertice's index is same to the index of the vector container<br>
    &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;push_back the origin vector : (0,0,0) <br>
    &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;push_back the vector which is on the circle : we cannot represent the circle with infinitive vectors; <br>
-   &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;so in this, I represent the circle with the number of triangles and circular coordinate systems.<br>
+   &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;so in this, I represent the circle with the number of triangles and circular coordinate systems.<br>
     &nbsp; &nbsp; &nbsp; &nbsp;For declaring the number of triangle with macro; it's easy to control the variable. Each vertice's informations is same as below : <br>
      &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;GLfloat theta = (GLfloat)(2 * PI) / howMuchTriUseForCircle * i;<br>
      &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;x = (GLfloat)RADUIS * std::cos(theta);<br>
