@@ -16,7 +16,7 @@
      &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;GLfloat theta = (GLfloat)(2 * PI) / howMuchTriUseForCircle * i;<br>
      &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;x = (GLfloat)RADUIS * std::cos(theta);<br>
      &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;y = (GLfloat)RADUIS * std::sin(theta);<br>
-    &nbsp; &nbsp; &nbsp; &nbsp;Using GLFloat data type is more appropriate when we use computer graphics but the "PI", "howMuchTriUseForCircle" is just macro; the type of these is double<br>
+    &nbsp; &nbsp; &nbsp; &nbsp;Using GLFloat data type is more appropriate when we use computer graphics but the "PI", "howMuchTriUseForCircle" is just macro;<br>
     &nbsp; &nbsp; &nbsp; &nbsp;So I used casting to change data type; (GLfloat)<br>
   &nbsp; &nbsp; &nbsp; &nbsp;Also make vector container to save the informations of triangles_which vertices comprise each triangles_std::vector <glm::u32vec3> triangles;<br>
     &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;glm::u32vec3 is the data type which is in glm library, means unsigned 32 bits vector's each value (x,y,z)<br>
