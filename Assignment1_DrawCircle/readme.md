@@ -12,7 +12,7 @@
     push_back the origin vector : (0,0,0) <br>
    push_back the vector which is on the circle : we cannot represent the circle with infinitive vectors; so in this, I represent the circle with the number of triangles and circular coordinate systems.
     For declaring the number of triangle with macro; it's easy to control the variable. Each vertice's informations is same as below : <br>
-     GLfloat theta = (GLfloat)(2 * PI) / howMuchTriUseForCircle * i;
+     GLfloat theta = (GLfloat)(2 * PI) / howMuchTriUseForCircle * i;<br>
      x = (GLfloat)RADUIS * std::cos(theta);<br>
      y = (GLfloat)RADUIS * std::sin(theta);<br>
     Using GLFloat data type is more appropriate when we use computer graphics but the "PI", "howMuchTriUseForCircle" is just macro; the type of these is double
