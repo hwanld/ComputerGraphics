@@ -1,9 +1,9 @@
 <h3>Assignment1_DrawCircle</h3>
-**-Goal : draw circle with using GL_TRIANGLES**			<br>
+**-Goal : draw circle with using GL_TRIANGLES**
 -Using "toys.h" header file, copyright by Hyun Joon Shin (Professor/Digital Media Department/Ajou University)<br>
 -Using global variable; Program program, GLuint vertBuf,triBuf,vertArray_can use everywhere like function<br>
 -Using 2 functions ; void init(), void render(GLFWwindow* window)<br>
-**-Ideas : Using circular coordinate system to represent the vector which is on the circle, than draw the triangles with ther vertices**		<br>
+**-Ideas : Using circular coordinate system to represent the vector which is on the circle, than draw the triangles with ther vertices**		
 -void init()<br>
   Load shades by program.loadShaders(".vert,.frag")<br>
   Make vector container to save the informations of vertice : std::vector<glm::vec3> vert;<br>
