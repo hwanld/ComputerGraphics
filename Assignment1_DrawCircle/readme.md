@@ -1,4 +1,4 @@
-<h3>Assignment1_DrawCircle</h3>
+<h2>Assignment1_DrawCircle</h2>
 <b>-Goal : draw circle with using GL_TRIANGLES</b><br>
 -Using "toys.h" header file, copyright by Hyun Joon Shin (Professor/Digital Media Department/Ajou University)<br>
 -Using global variable; Program program, GLuint vertBuf,triBuf,vertArray_can use everywhere like function<br>
