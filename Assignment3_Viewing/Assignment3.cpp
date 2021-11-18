@@ -24,6 +24,8 @@ const float PI = 3.141592;
 
 float theta = 0;
 float phi = 0;
+float fov = 60;
+float cameraDistance = 1;
 
 vec3 cameraPosition = vec3(0,0,5);
 
@@ -36,9 +38,20 @@ void cursorCallback(GLFWwindow* window, double xpos, double ypos) {
 	if (glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_1)) {
 		theta -= (xpos - oldX)/width * PI;
 		phi -= (ypos - oldY) / height * PI;
+		if (phi < -90) phi = -90;
+		if (phi > 90) phi = 90;
+		if (theta < -90) theta = -90;
+		if (theta > 90) theta = 90;
 	}
 	oldX = xpos;
 	oldY = ypos;
+}
+
+void scrollCallback(GLFWwindow* window, double xoffset, double yoffset) {
+	//cameraDistance = cameraDistance * pow(1,01, yoffset);
+	fov = fov * pow(1.1, yoffset);
+	if (fov < 10) fov = 10;
+	if (fov > 170) fov = 170;
 }
 
 int main(void) {
@@ -46,11 +59,13 @@ int main(void) {
 	GLFWwindow* window = glfwCreateWindow(640, 640, "LeeDongHwanAssignment3", NULL, NULL);
 
 	glfwSetCursorPosCallback(window, cursorCallback);
+	glfwSetScrollCallback(window, scrollCallback);
 
 	glfwMakeContextCurrent(window);
 	glewInit();
 	init();
 	while (!glfwWindowShouldClose(window)) {
+		glfwPollEvents();
 		render(window);
 	}
 	glfwDestroyWindow(window);
@@ -81,10 +96,10 @@ void render(GLFWwindow* window) {
 	int width, height;
 	glfwGetFramebufferSize(window, &width, &height);
 
-	vec3 cameraPos = vec3(rotate(theta, vec3(0, 1, 0)) * rotate(phi, vec3(1, 0, 0)) * vec4(cameraPosition, 1));
+	vec3 cameraPos = vec3(rotate(theta, vec3(0, 1, 0)) * rotate(phi, vec3(1, 0, 0)) * vec4(cameraPosition, 1)); // *cameraDistance
 
-	mat4 viewMat = lookAt(cameraPosition, vec3(0, 0, 0), vec3(0, 1, 0));
-	mat4 projMat = perspective(60 * 3.141592f / 180, width / (float)height, 0.1f, 100.f);
+	mat4 viewMat = lookAt(cameraPos, vec3(0, 0, 0), vec3(0, 1, 0));
+	mat4 projMat = perspective(fov * PI / 180, width / (float)height, 0.1f, 100.f);
 	mat4 modelMat = mat4(1);
 
 	glViewport(0, 0, width, height);
