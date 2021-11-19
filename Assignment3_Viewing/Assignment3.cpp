@@ -38,10 +38,11 @@ void cursorCallback(GLFWwindow* window, double xpos, double ypos) {
 	if (glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_1)) {
 		theta -= (xpos - oldX)/width * PI;
 		phi -= (ypos - oldY) / height * PI;
-		if (phi < -90) phi = -90;
-		if (phi > 90) phi = 90;
-		if (theta < -90) theta = -90;
-		if (theta > 90) theta = 90;
+		if (phi < -PI / 2) phi = -PI / 2;
+		if (phi > PI / 2) phi = PI / 2;
+		if (theta < - PI / 2) theta = -PI / 2;
+		if (theta > PI / 2) theta = PI / 2;
+		printf("%f %f \n", phi, theta);
 	}
 	oldX = xpos;
 	oldY = ypos;
